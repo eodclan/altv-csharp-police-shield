@@ -12,7 +12,8 @@ This ressource adds a useable ballistic & riot shield. They
 
 To use from shield item part **serverside**: 
 
-```if (!player.HasData("shield")){
+```
+if (!player.HasData("shield")){
 	bool shieldstate = true;
 	int istate = shieldstate ? 1 : 0;
 	player.SetStreamSyncedMetaData("shield", istate);
@@ -20,7 +21,8 @@ To use from shield item part **serverside**:
 } else {
 	player.DeleteStreamSyncedMetaData("shield");
 	player.DeleteStreamSyncedMetaData("shieldstatus");
-}```
+}
+```
 
 Serverside events in serverside_templates.cs :)
 
@@ -30,7 +32,9 @@ If you just want to test the ressource add the following
 
 to the **index.js** or whatever:
 
-```import * as shield from '/your_framework_ui_folder/shield.js';```
+```
+import * as shield from '/your_framework_ui_folder/shield.js';
+```
 
 ## Credits
 
