@@ -39,7 +39,7 @@ import * as shield from '/your_framework_ui_folder/shield.js';
 ## Using
 
 1. Equip the shield by pressing "0"
-2. Equip the shield by pressing "9"
+2. Unequip the shield by pressing "9"
 
 
 ## Credits
