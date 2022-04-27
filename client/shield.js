@@ -13,7 +13,7 @@ alt.on('keydown', (key) => {
     if (key == 48 && alt.Player.local.hasStreamSyncedMeta("shield")){
         isShieldUp = true
         playAnim(animDict,animName,-1,50,false);
-        alt.emitServer("Server:Shield:shieldUp")
+        alt.emitServer("Server:Shield:shieldUp");
         if(!game.isPedArmed(alt.Player.local.scriptID, 1)){
            game.giveWeaponToPed(alt.Player.local.scriptID, -1569615261, 0, false, true); 
         }
@@ -24,7 +24,9 @@ alt.on('keyup', (key) => {
     if (key == 48 && alt.Player.local.hasStreamSyncedMeta("shield")){
         isShieldUp = false
         game.stopAnimTask(alt.Player.local.scriptID, animDict, animName, 1);
-        alt.emitServer("Server:Shield:shieldDown")
+        alt.emitServer("Server:Shield:shieldDown");
+    } else if (key === 57 && alt.Player.local.hasStreamSyncedMeta("shield")) {
+		alt.emitServer("Server:Shield:removeShield");
     }
 });
 
