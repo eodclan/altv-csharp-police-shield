@@ -47,6 +47,3 @@ import * as shield from '/your_framework_ui_folder/shield.js';
 Client part from benstrobel 
 
 CSharp Server part from DerStr1k3r
-
-
-With that anyone can (un)equip the shield by pressing "0"
