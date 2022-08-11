@@ -135,7 +135,8 @@ function removeShield(targetPlayer){
         }
         var shield = targetPlayer.getMeta("shield");
         game.detachEntity(shield, true, true);
-        game.deleteEntity(shield);
+        game.deleteObject(shield);
+		game.deleteEntity(shield);
         targetPlayer.deleteMeta("shield")
     }
 }
